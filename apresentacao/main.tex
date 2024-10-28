@@ -1,0 +1,87 @@
+
+% =========================
+% Orientações Gerais do Modelo de Slides
+% =========================
+% 
+% Autor: Bruno Francisco Schaden
+% Curso: Ciências Econômicas - UDESC-ESAG
+% 
+% Este modelo de slides foi desenvolvido para uso amplo por professores e alunos da UDESC-ESAG, 
+% focando na apresentação de aulas e trabalhos acadêmicos. 
+% 
+% Abaixo estão as instruções sobre como utilizar o modelo de maneira eficaz:
+%
+% -------------------------------------------
+% Seções do Comentário
+% -------------------------------------------
+%
+% Introdução:
+% Este modelo de slides é estruturado para criar apresentações com um estilo visual consistente e formal. 
+% O objetivo é oferecer uma plataforma visual adequada para exposições acadêmicas e apresentações de aula, 
+% seguindo as cores oficiais e estilo tipográfico azul padrão da UDESC-ESAG.
+%
+% Estrutura do Modelo:
+% A estrutura do modelo inclui slides padrão de título, tópicos, seções de conteúdo (texto, gráficos, imagens), 
+% slides de duas colunas para comparações e listagens, e espaço para fórmulas matemáticas e códigos, com instruções detalhadas para cada tipo de slide.
+% 
+% Regras de Estilo:
+% - Cores: Utilize o tom de azul presente no modelo para títulos e destaques, garantindo uniformidade.
+% - Tipografia: O modelo já define a fonte padrão adequada, e é recomendável não alterar as fontes para preservar a identidade visual.
+% - Estrutura dos slides: Utilize os comandos \section e \subsection para organizar o conteúdo, pois isso mantém o sumário (Outline) atualizado automaticamente.
+%
+% Créditos:
+% Este modelo foi desenvolvido e creditado a Bruno Francisco Schaden, estudante de Ciências Econômicas da UDESC-ESAG.
+% O uso é livre, com atribuição, incentivando melhorias e compartilhamento de versões adaptadas.
+%
+% Instruções Adicionais:
+% - Personalizações: Para adicionar novos estilos ou customizações, faça alterações ao final do arquivo, evitando mudanças na estrutura básica.
+% - Compartilhamento: Ao compartilhar este modelo, mantenha os créditos e ofereça instruções para que outros possam adaptar e contribuir com novas versões.
+% - Colaboração: Feedbacks e sugestões são bem-vindos para aprimorar futuras atualizações deste modelo.
+% Caso encontre erros, bugs ou deseja propor melhorias, crie um PR (Pull Request) no repositório do GitHub https://github.com/Schadenlord/slide-esag 
+%
+% =========================
+
+
+\documentclass{beamer} % Define o tipo de documento como apresentação de slides
+
+% Inclusão dos pacotes e do tema
+\input{Theme/Packages.tex}
+
+\usetheme{oxonian}  % Define o tema da apresentação (oxonian é o tema padrão)
+
+% Definições da capa
+\title{Modelo de Apresentação para a ESAG} % Título da apresentação
+\titlegraphic{\includegraphics[width=3cm]{Theme/Logos/esag_3.png}} % Adiciona o logo da ESAG na capa (está atualmente no aniversário de 60 anos da ESAG)
+\author{Nome do Autor \and Nome do Coautor} % Adicione ou altere  os  autores conforme necessário
+\institute{Universidade do Estado de Santa Catarina} 
+\date{\today} % Exibe a data atual, mas pode ser substituída por uma data específica
+
+\begin{document} % Início do documento
+
+% Exibe a capa
+{\setbeamertemplate{footline}{} 
+\frame{\titlepage}}
+
+% Slide de Sumário
+\section*{Outline}
+\begin{frame}{Sumário}
+    \tableofcontents[
+        sections= {1, 2, 3, 4, 5, 6, 7, 8, 9} % Exibe apenas as seções listadas (para ocultar uma seção, remova-a da lista, ou se quiser exibir todas as seções, remova esta linha)
+        , hideallsubsections % Oculta as subseções (se quiser, para não poluir o sumário), para exibir todas as subseções, remova esta linha
+    ]
+\end{frame}
+
+% Inclusão do conteúdo real dos slides
+\include{textual/content}
+
+% O conteúdo dos slides é inserido no arquivo "content.tex" na pasta "textual". Foi definido um arquivo separado para facilitar a organização e edição do conteúdo. Caso deseje adicionar mais arquivos de conteúdo para melhor organização, basta cria-los na pasta "textual" e incluí-los aqui com o comando \include{textual/seuarquivo.tex} (substitua "seuarquivo" pelo nome do arquivo).
+
+% Adicione mais slides conforme necessário, seguindo a estrutura dos slides de exemplo fornecidos no arquivo "content.tex".
+
+% Slide de Referências
+% As referências são inseridas no arquivo "References.bib" e são exibidas automaticamente no slide de referências ao final da apresentação. Caso não deseje exibir as referências, comente as linhas \bibliographystyle{abntex2-alf} e \bibliography{References} no final do arquivo e não use o comando \cite{} no conteúdo dos slides.
+
+\bibliographystyle{abntex2-alf}
+\bibliography{References}
+
+\end{document} % Fim do documento
