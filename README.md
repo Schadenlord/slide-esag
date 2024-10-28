@@ -1,5 +1,7 @@
 # 🌟 Modelo de Slides UDESC-ESAG
 
+Versão: 1.0.0
+
 ## 📚 Descrição
 
 Este repositório contém um **modelo de slides** desenvolvido para uso acadêmico por professores e alunos da **UDESC-ESAG**. O modelo segue as diretrizes de formatação e estilo da instituição, proporcionando uma base visual consistente e formal para a apresentação de aulas e trabalhos acadêmicos. Todo o conteúdo está alinhado com a direção de ensino da ESAG; para mais detalhes, sinta-se à vontade para contatá-los.
